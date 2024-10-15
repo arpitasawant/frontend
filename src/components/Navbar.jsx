@@ -1,4 +1,5 @@
 
+
 // import React, { useState } from "react";
 // import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 // import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome icons
@@ -17,22 +18,19 @@
 //         />
 //       </div>
 //       {/* Increase space between items and increase font size */}
-//       <div className="flex items-center space-x-12 hidden md:flex">
+//       <div className="flex items-center space-x-8 hidden md:flex"> {/* Adjusted space-x to 8 */}
 //         <Link to="/" className="text-black hover:underline text-xl">
 //           Home
 //         </Link>
 //         <Link to="/course" className="text-black hover:underline text-xl">
 //           Courses
 //         </Link>
-//         <a href="#" className="text-black hover:underline text-xl">
+//         <Link to="/resources" className="text-black hover:underline text-xl">
 //           Resources
-//         </a>
-//         {/* <a href="#" className="text-black hover:underline text-xl">
+//         </Link>
+//         <Link to="/contact-us" className="text-black hover:underline text-xl">
 //           Contact
-//         </a> */}
-//         <Link to="/contact-us" className="block text-black mb-2 text-xl">
-//             Contact
-//           </Link>
+//         </Link>
 //         <a href="#" className="text-black hover:underline text-xl">
 //           Store
 //         </a>
@@ -55,16 +53,16 @@
 //           <Link to="/course" className="block text-black mb-2 text-xl">
 //             Courses
 //           </Link>
-//           <a href="#" className="block text-black mb-2 text-xl">
+//           <Link to="/resources" className="block text-black mb-2 text-xl">
 //             Resources
-//           </a>
+//           </Link>
+//           {/* <a href="#" className="block text-black mb-2 text-xl">
+//             Resources
+//           </a> */}
 //           <Link to="/contact-us" className="block text-black mb-2 text-xl">
 //             Contact
 //           </Link>
-//           {/* <a href="#" className="block text-black mb-2 text-xl">
-//             Contact
-//           </a> */}
-//           <a href="#" className="block text-black text-xl">
+//           <a href="#" className="block text-black mb-2 text-xl">
 //             Store
 //           </a>
 //         </div>
@@ -74,7 +72,6 @@
 // }
 
 // export default Navbar;
-
 import React, { useState } from "react";
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import Font Awesome icons
@@ -106,9 +103,10 @@ function Navbar() {
         <Link to="/contact-us" className="text-black hover:underline text-xl">
           Contact
         </Link>
-        <a href="#" className="text-black hover:underline text-xl">
+        {/* Replace <a> with a button if Store link is not ready */}
+        <button className="text-black hover:underline text-xl" onClick={() => alert("Store coming soon!")}>
           Store
-        </a>
+        </button>
         <i className="fas fa-shopping-bag text-black">
           <span className="ml-1 text-black">(0)</span>
         </i>
@@ -131,15 +129,13 @@ function Navbar() {
           <Link to="/resources" className="block text-black mb-2 text-xl">
             Resources
           </Link>
-          {/* <a href="#" className="block text-black mb-2 text-xl">
-            Resources
-          </a> */}
           <Link to="/contact-us" className="block text-black mb-2 text-xl">
             Contact
           </Link>
-          <a href="#" className="block text-black mb-2 text-xl">
+          {/* Replace <a> with button for store */}
+          <button className="block text-black mb-2 text-xl" onClick={() => alert("Store coming soon!")}>
             Store
-          </a>
+          </button>
         </div>
       )}
     </nav>
